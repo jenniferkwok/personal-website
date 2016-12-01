@@ -1,5 +1,6 @@
-$(document).ready(function() {
 
+
+$(document).ready(function() {
         //Calculate the height of <header>
         //Use outerHeight() instead of height() if have padding
         var aboveHeight = $('header').outerHeight();
@@ -17,5 +18,23 @@ $(document).ready(function() {
                 $('nav').removeClass('fixed').next()
                 .css('padding-top','0');
                 }
-        });
+
+
+    var controller = new ScrollMagic.Controller();
+
+    var ourScene = new ScrollMagic.Scene({
+        triggerElement: '#animation',
+        triggerHook: 0.3
+    })
+    .setClassToggle('#animation', 'fade-in')
+    .addIndicators()
+    .addTo(controller);
+
+});
+
+
+
+
+
+
 });
