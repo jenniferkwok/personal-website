@@ -1,6 +1,34 @@
 
 
 $(document).ready(function() {
+
+    var controller = new ScrollMagic.Controller();
+
+    // var ourScene = new ScrollMagic.Scene({
+    //     triggerElement: '#animation',
+    //     triggerHook: 0.3
+    // })
+    // .setClassToggle('#animation', 'fade-in')
+    // .addTo(controller);
+
+        // Scene 1 - pin the second section
+    var pinScene01 = new ScrollMagic.Scene({
+        triggerElement: '#welcome',
+        triggerHook: 0,
+        duration: '200%'
+    })
+    .setPin('#welcome', {pushFollowers: false})
+    .addTo(controller)
+    ;
+
+    var pinScene01 = new ScrollMagic.Scene({
+        triggerElement: '#east',
+        triggerHook: 0,
+        duration: '100%'
+    })
+    .setPin('#east', {pushFollowers: false})
+    .addTo(controller)
+    ;
         //Calculate the height of <header>
         //Use outerHeight() instead of height() if have padding
         var aboveHeight = $('header').outerHeight();
@@ -20,15 +48,7 @@ $(document).ready(function() {
                 }
 
 
-    var controller = new ScrollMagic.Controller();
 
-    var ourScene = new ScrollMagic.Scene({
-        triggerElement: '#animation',
-        triggerHook: 0.3
-    })
-    .setClassToggle('#animation', 'fade-in')
-    .addIndicators()
-    .addTo(controller);
 
 });
 

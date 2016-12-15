@@ -22,8 +22,8 @@ nav {
     line-height:50px;
     position: relative;
 }
-#content {
-    /*height: 1500px;  presetting the height */
+#east {
+background-color: white;
 }
 .fixed {
         position:fixed;
@@ -42,11 +42,14 @@ section {
 h1 {
     font-size: 60px;
 }
-section {
-    height: 100%;
-       padding: 200px 100px;
+.slide {
+  position: relative;
+  overflow: hidden;
+  height: 100vh; 
+    /*height: 100%;*/
+ padding: 200px 100px;
 }
-#welcome, #contact {
+#welcome, #contact, #beautiful {
     opacity: .9;
     color: white;
     background: linear-gradient(90deg, #bcf0bb, #a9e1e9, #d0b2f6, #f2b8d7, #f0e090)20%;

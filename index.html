@@ -11,30 +11,35 @@
   <!-- VENDOR SCRIPTS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/f6db2c07e5.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
 </head>
 
 <body>
   <div id="wrapper">
     <header>
-      <section id="welcome">
+      <article id="welcome" class="slide">
+      <div id="pin-wrapper">
         <h1>Hello</h1>
         <h1><img src="point.png">This is Jennifer Kwok</h1> 
-      </section>
-      <section>
+        </div>
+      </article>
+      <article id="east" class="slide">
+            <div id="pin-wrapper">
         <h2>from the far East</h2>
         <h2>Resides in San Francisco</h2>
         <h5>Love! Love! Love!</h5>
-        <p>
-        </section>
-      <section>
+        </div>
+        </article>
+      <article id="beautiful" class="slide">
+            <div id="pin-wrapper">
         <h2>Jennifer makes something beautiful every day.</h2>
         A Web developer
         Graphic Designer
         Artist
         et cetera
-</section>
+        </div>
+</article>
 
       </header>
       <!-- nav snippet -->
@@ -70,8 +75,12 @@
 
     <!-- SCRIPTS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
 
     <script src="scripts.js"></script>
   </body>
