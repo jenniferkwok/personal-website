@@ -22,11 +22,11 @@ $(document).ready(function() {
     ;
 
     var pinScene01 = new ScrollMagic.Scene({
-        triggerElement: '#east',
+        triggerElement: '#web',
         triggerHook: 0,
         duration: '100%'
     })
-    .setPin('#east', {pushFollowers: false})
+    .setPin('#web', {pushFollowers: false})
     .addTo(controller)
     ;
         //Calculate the height of <header>
