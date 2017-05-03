@@ -9,24 +9,39 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <!-- VENDOR SCRIPTS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script src="https://use.fontawesome.com/f6db2c07e5.js"></script>
-  <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
+
 
 </head>
 
 <body>
   <div id="wrapper">
-    <header>
-      <article id="welcome" class="slide">
-        <div id="pin-wrapper">
-          <h1>JENNIFER KWOK</h1>
-          <h1>UI DESIGNER & DEVELOPER</h1> 
+
+    <article id="welcome" class="slide">
+      <div id="pin-wrapper">
+        <h1>JENNIFER KWOK</h1>
+        <h1>UI DESIGNER & <br>DEVELOPER</h1> 
+        <div class="submit">
+          <input value="Contact" class="form_button" id="call"/>
         </div>
-      </article>
-      <article id="about" class="slide">
-        <div id="pin-wrapper">
-          <h2>Jennifer Kwok specializes in: Intereactive web design, front-end development.
+      </div>
+    </article>
+    <article id="about" class="slide">
+      <div id="pin-wrapper">
+        <p>
+I am Jennifer Kwok, an interface designer and developer in San Francisco.</p>
+        <p>I love to seek innovative forms of visual communication.</p>
+          <p>My biggest hobby is to look at beautiful things (sometimes <a target="_blank" href="https://500px.com/jenniferkwok">through my film camera</a>).</p>
+
+          <p>Skill set:
+            <br>Full stack Javascript
+            <br>Adobe Creative Suite</p>
+
+            <p><a href="https://drive.google.com/file/d/0B1Ij8zRs-h4SYWVNY1lYeGhWZmc/view?usp=sharing" target="_blank">Full Resume <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></p> 
+            <p>Say Hello</p>
           </div>
         </article>
         <article id="web" class="slide">
@@ -40,57 +55,54 @@
         <article id="graphic-design" class="slide">
           <h1>GRAPHIC DESIGN</h1>
           <!-- PHOTO SQUARES -->
-          <a>more...</a>
+          <p><a>more...</a></p>
           <!--  launch-->
         </article>
         <article id="photography" class="slide">
           <h1>PHOTOGRAPHY</h1>
           <!-- PHOTO SQUARES -->
-          <a>more...</a>
+          <p><a>more...</a></p>
           <!--  launch-->
         </article>
-      </header>
-      <!-- nav snippet -->
-      <nav>
-        <ul class='nav_links'>
-          <li><a href="url">About</a></li>
-          <li><a href="url">Web</a></li>
-          <li><a href="url">Graphic design</a></li>
-          <li><a href="url">Photography</a></li>
-          <li><a href="url">Art</a></li>
-        </ul>
-      </nav>
 
-      <article id="content" class="slide">
-
-        <div id="scene">
-          <h1 id="animation">COLLABORATION? HECK YES</h1>
+        <article name="contact">
+<div id="container">
+          <!-- <div id="scene"> -->
+          <h1>LET'S TALK</h1>
           <!-- FORM -->
           <form id="contactform">
-            <label for="yourname">Your Name</label>
-            <input type="text" placeholder="Your Name" name="yourname" class="required">
-            <label for="organization">Your Organization</label>
-            <input type="text" placeholder="Your Organization" name="organization">
-            <label for="textfield">How Can I help you?</label>
-            <input type="textfield" placeholder="How can I help you?" name="textfield">
-            <button type="submit" class="btn btn-warning">Submit</button>
+            <div class="name">
+              <label for="yourname">Your Name *</label>
+              <input type="text" name="yourname" required>
+            </div>
+            <div class="email">
+              <label for="email">Your email *</label>
+              <input type="email" name="email" required>
+            </div>
+            <label for="organization">Company / Organization</label>
+            <input type="text" name="organization">
+            <label for="textarea">Message *</label>
+            <textarea name="message" id="message_input" cols="30" rows="5" style="border: 2px solid black;" required></textarea>
+            <div class="submit">
+              <input type="submit" value="Send" class="form_button" />
+            </div>
           </form>
+          <h3><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;jenwkwok&nbsp;<i class="fa fa-at" aria-hidden="true"></i>&nbsp;gmail.com</h3>
+          </div>
+          <!-- </div> -->
+        </article>
 
-        </div>
-      </article>
 
-      <h3><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;&nbsp;jenwkwok&nbsp;<i class="fa fa-at" aria-hidden="true"></i>&nbsp;gmail.com</h3>
+      </div>
     </div>
-  </div>
-  <!-- SOCIAL MEDIA LINKS -->
-  <ul class="fa-ul">
+    <!-- SOCIAL MEDIA LINKS -->
+ <!--  <ul class="fa-ul">
     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a target="_blank" href="http://www.jenniferkwokgraphics.blogspot.com/">My Portfolio (Web & Graphic Design)</a></li>
     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a target="_blank" href="https://500px.com/jenniferkwok">500px</a></li>
-    <!-- <li>Instagram (Doodles)</li> -->
     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a target="_blank" href="https://github.com/jenniferkwok">Github</a></li>
     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a target="_blank" href="https://www.linkedin.com/in/jenniferwkwok">LinkedIn</a></li>
     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a target="_blank" href="https://www.pinterest.com/jenwkwok/">Pinterest</a></li>
-  </ul>
+  </ul> -->
 
   <!-- SCRIPTS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
