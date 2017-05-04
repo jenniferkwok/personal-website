@@ -127,18 +127,6 @@ I am Jennifer Kwok, an interface designer and developer in San Francisco.</p>
 
       </div>
     </div>
-
-<form action="mailto:gua.letters@gmail.com" method="post" enctype="text/plain">
-Name:<br>
-<input type="text" name="name"><br>
-E-mail:<br>
-<input type="text" name="mail"><br>
-Comment:<br>
-<input type="text" name="comment" size="50"><br><br>
-<input type="submit" value="Send">
-<input type="reset" value="Reset">
-</form>
-
     
     <!-- SOCIAL MEDIA LINKS -->
  <!--  <ul class="fa-ul">
