@@ -7,14 +7,12 @@ font-family: 'Montserrat', sans-serif;
   padding: 0;
     width:100%;
     height:100%;
+    background-color: #FF999C;
         /*background: url(triangle-transparent.png) top right;*/
         /*background-size: 110%;*/
         /*text-transform: uppercase;*/
 }
 
-#east {
-background-color: white;
-}
 .fixed {
         position:fixed;
 }
@@ -111,6 +109,7 @@ textarea {
   max-width: 75%;
   margin: 60px auto;
   position: relative;
+  background-color: #FFFDF3;
 }
 
 form {

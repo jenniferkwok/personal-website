@@ -1,3 +1,9 @@
+<?php
+if($_POST["message"]) {
+    mail("jenwkwok@gmail.com", "Form to email message", $_POST["message"], "From: jk@web.site");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -96,7 +102,7 @@ I am Jennifer Kwok, an interface designer and developer in San Francisco.</p>
           <!-- <div id="scene"> -->
           <h1>LET'S TALK</h1>
           <!-- FORM -->
-          <form id="contactform">
+          <form id="contactform" method="post" action="contact.php">
             <div class="name">
               <label for="yourname">Your Name *</label>
               <input type="text" name="yourname" required>
@@ -121,6 +127,19 @@ I am Jennifer Kwok, an interface designer and developer in San Francisco.</p>
 
       </div>
     </div>
+
+<form action="mailto:gua.letters@gmail.com" method="post" enctype="text/plain">
+Name:<br>
+<input type="text" name="name"><br>
+E-mail:<br>
+<input type="text" name="mail"><br>
+Comment:<br>
+<input type="text" name="comment" size="50"><br><br>
+<input type="submit" value="Send">
+<input type="reset" value="Reset">
+</form>
+
+    
     <!-- SOCIAL MEDIA LINKS -->
  <!--  <ul class="fa-ul">
     <li><i class="fa fa-arrow-right" aria-hidden="true"></i><a target="_blank" href="http://www.jenniferkwokgraphics.blogspot.com/">My Portfolio (Web & Graphic Design)</a></li>
