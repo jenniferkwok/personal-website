@@ -68,6 +68,23 @@ $(document).ready(function() {
 
   // });
 
-
+$("#gform").submit(function(e){
+    e.preventDefault();
+        event.preventDefault();
+    var form = $('#gform');
+    $.ajax({
+        type: 'POST',
+        url: 'https://script.google.com/macros/s/AKfycbwHfGvXKTn3TlAU034WDiblu9nnodoye-MG0iYvwiac_MXhP2M/exec',
+        data: form.serialize()
+    })
+    .done(function (data) {
+        console.log("got data:",data);
+        // $('#response').html(data);
+        alert("Thank you - message sent!")
+    })
+    .fail(function () {
+        alert("Posting failed.");
+    });
+});
 
     });
