@@ -14,7 +14,6 @@
   <script src="https://use.fontawesome.com/f6db2c07e5.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.2/jquery.scrollTo.min.js"></script>
 
-
 </head>
 
 <body>
@@ -95,20 +94,64 @@ I am Jennifer Kwok, an interface designer and developer in San Francisco.</p>
 <div id="container">
           <!-- <div id="scene"> -->
           <h1>LET'S TALK</h1>
+
+
+<!--  -->
+
+
+  <form id="gform" method="POST" class="pure-form pure-form-stacked"
+  action="https://script.google.com/macros/s/AKfycbwMxYDrufp73bKdU8gMvxFDdHRuzcR4IKQUB33B7GqwyfyZS04/exec">
+    <!-- change the form action to your script url -->
+
+    <fieldset class="pure-group">
+      <label for="name">Name: </label>
+      <input id="name" name="name" placeholder="What your Mom calls you" />
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="message">Message: </label>
+      <textarea id="message" name="message" rows="10"
+      placeholder="Tell us what's on your mind..."></textarea>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="email"><em>Your</em> Email Address:</label>
+      <input id="email" name="email" type="email" value=""
+      required placeholder="your.name@email.com"/>
+      <span id="email-invalid" style="visibility:hidden">
+        Must be a valid email address</span>
+    </fieldset>
+
+    <fieldset class="pure-group">
+      <label for="color">Favourite Color: </label>
+      <input id="color" name="color" placeholder="green" />
+    </fieldset>
+
+    <button class="button-success pure-button button-xlarge">
+      <i class="fa fa-paper-plane"></i>&nbsp;Send</button>
+
+  </form>
+
+  <!-- Customise the Thankyou Message People See when they submit the form: -->
+  <div style="display:none;" id="thankyou_message">
+    <h2><em>Thanks</em> for contacting us!
+      We will get back to you soon!</h2>
+  </div>
+
           <!-- FORM -->
-          <form id="contactform" method="post" action="contact.php">
+          <form id="contactform" action="https://script.google.com/macros/s/AKfycbwHfGvXKTn3TlAU034WDiblu9nnodoye-MG0iYvwiac_MXhP2M/exec" method="post" enctype="text/plain">
             <div class="name">
               <label for="yourname">Your Name *</label>
-              <input type="text" name="yourname" required>
+              <input type="text" id="name" name="yourname" required>
             </div>
             <div class="email">
               <label for="email">Your email *</label>
-              <input type="email" name="email" required>
+              <input type="email" id="email" name="email" required>
             </div>
             <label for="organization">Company / Organization</label>
-            <input type="text" name="organization">
+            <input type="text" value="organization" name="organization">
             <label for="textarea">Message *</label>
-            <textarea name="message" id="message_input" cols="30" rows="5" style="border: 2px solid black;" required></textarea>
+            <textarea value="message" name="message" id="message_input" cols="30" rows="5" style="border: 2px solid black;" required></textarea>
             <div class="submit">
               <input type="submit" value="Send" class="form_button" />
             </div>
@@ -139,7 +182,8 @@ I am Jennifer Kwok, an interface designer and developer in San Francisco.</p>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/plugins/ScrollToPlugin.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
-
+<script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
