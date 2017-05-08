@@ -4,6 +4,8 @@ $(document).ready(function() {
 
    var controller = new ScrollMagic.Controller();
 
+// fade in
+
   //   // var ourScene = new ScrollMagic.Scene({
   //   //     triggerElement: '#animation',
   //   //     triggerHook: 0.3
@@ -30,12 +32,12 @@ $(document).ready(function() {
          .addTo(controller)
          ;
 
-
        var pinScene01 = new ScrollMagic.Scene({
          triggerElement: '#slide01',
          triggerHook: 0,
           duration: '100%'
        })
+.setClassToggle('#slide01', 'fade-in')
          .setPin('#slide01', {pushFollowers: false})
          .addTo(controller)
          ;
@@ -79,8 +81,9 @@ $("#gform").submit(function(e){
     })
     .done(function (data) {
         console.log("got data:",data);
-        // $('#response').html(data);
         alert("Thank you - message sent!")
+        $('#gform')[0].reset();
+        $('#gform').append("<h2>Thank you!</h2>")
     })
     .fail(function () {
         alert("Posting failed.");

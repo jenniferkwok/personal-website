@@ -62,8 +62,9 @@ animation: AnimationName 10s ease infinite;
     100%{background-position:0% 50%}
 }
 
+/*scrollmagic*/
 
-#animation {
+.project {
     text-align: center;
     padding: 200px 0;
     border-bottom: 1px #ebebeb solid;
@@ -71,12 +72,12 @@ animation: AnimationName 10s ease infinite;
     transform: translateY(100px);
     transition: all 1s ease-out;
 }
-#animation.fade-in {
+.project.fade-in {
     opacity: 1;
     transform: translateY(0px);
 }
 
-/**/
+/*contact form*/
 
 body {
   background: white;
