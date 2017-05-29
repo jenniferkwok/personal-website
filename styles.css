@@ -13,6 +13,12 @@ font-family: 'Montserrat', sans-serif;
         /*background-size: 110%;*/
         /*text-transform: uppercase;*/
 }
+img {
+  height: 250px;
+}
+.envelope {
+  height: 70px
+}
 h1 {
   color: #FFD064;
   letter-spacing: 7px;
