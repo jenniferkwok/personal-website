@@ -2,7 +2,60 @@
 
 $(document).ready(function() {
 
+
+// flying envelope
+    var flightpath = {
+      entry : {
+        curviness: 1.25,
+        autoRotate: true,
+        values: [
+            {x: 100,  y: -20},
+            {x: 300,  y: 10}
+          ]
+      },
+      looping : {
+        curviness: 1.25,
+        autoRotate: true,
+        values: [
+            {x: 510,  y: 60},
+            {x: 620,  y: -60},
+            {x: 500,  y: -100},
+            {x: 380,  y: 20},
+            {x: 500,  y: 60},
+            {x: 580,  y: 20},
+            {x: 620,  y: 15}
+          ]
+      },
+      leave : {
+        curviness: 1.25,
+        autoRotate: true,
+        values: [
+            {x: 660,  y: 20},
+            {x: 800,  y: 130},
+            {x: $(window).width() + 300,  y: -100},
+          ]
+      }
+    };
+    // init controller
+    var controller = new ScrollMagic.Controller();
+
+    // create tween
+    var tween = new TimelineMax()
+      .add(TweenMax.to($("#env"), 1.2, {css:{bezier:flightpath.entry}, ease:Power1.easeInOut}))
+      .add(TweenMax.to($("#env"), 2, {css:{bezier:flightpath.looping}, ease:Power1.easeInOut}))
+      .add(TweenMax.to($("#env"), 1, {css:{bezier:flightpath.leave}, ease:Power1.easeInOut}));
+
+    // build scene
+    var scene = new ScrollMagic.Scene({triggerElement: "#trigger", duration: 500, offset: 100})
+            .setPin("#target")
+            .setTween(tween)
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+//
+
    var controller = new ScrollMagic.Controller();
+
+
 
 // fade in
 
@@ -23,33 +76,40 @@ $(document).ready(function() {
   //       .addTo(controller)
   //       ;
 
-       var pinScene00 = new ScrollMagic.Scene({
-         triggerElement: '#web',
-         triggerHook: 0,
-          duration: '100%'
-       })
-         .setPin('#web', {pushFollowers: false})
-         .addTo(controller)
-         ;
 
-       var pinScene01 = new ScrollMagic.Scene({
-         triggerElement: '#slide01',
-         triggerHook: 0,
-          duration: '100%'
-       })
-.setClassToggle('#slide01', 'fade-in')
-         .setPin('#slide01', {pushFollowers: false})
-         .addTo(controller)
-         ;
+// web work fade in
 
-       var pinScene02 = new ScrollMagic.Scene({
-         triggerElement: '#slide02',
-         triggerHook: 0,
-          duration: '100%'
-       })
-         .setPin('#slide02', {pushFollowers: false})
-         .addTo(controller)
-         ;
+//        var pinScene00 = new ScrollMagic.Scene({
+//          triggerElement: '#web',
+//          triggerHook: 0,
+//           duration: '100%'
+//        })
+//          .setPin('#web', {pushFollowers: false})
+//          .addTo(controller)
+//          ;
+
+//        var pinScene01 = new ScrollMagic.Scene({
+//          triggerElement: '#slide01',
+//          triggerHook: 0,
+//           duration: '100%'
+//        })
+// .setClassToggle('#slide01', 'fade-in')
+//          .setPin('#slide01', {pushFollowers: false})
+//          .addTo(controller)
+//          ;
+
+//        var pinScene02 = new ScrollMagic.Scene({
+//          triggerElement: '#slide02',
+//          triggerHook: 0,
+//           duration: '100%'
+//        })
+//          .setPin('#slide02', {pushFollowers: false})
+//          .addTo(controller)
+//          ;
+
+
+
+
   //       //Calculate the height of <header>
   //       //Use outerHeight() instead of height() if have padding
   //       var aboveHeight = $('header').outerHeight();
