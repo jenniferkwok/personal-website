@@ -52,12 +52,17 @@ section {
  padding: 200px 100px;
 }
 #welcome {
+  background-image: url("IMG_1497.jpg");
+  background-size: 100%;
+}
+/*#welcome {
 background: linear-gradient(180deg, #FCBFBF, #FFD064)40%;
 background-size: 200% 200%;
 -webkit-animation: AnimationName 4s ease infinite;
 -moz-animation: AnimationName 4s ease infinite;
 animation: AnimationName 4s ease infinite;
-}
+}*/
+
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
@@ -72,6 +77,53 @@ animation: AnimationName 4s ease infinite;
     0%{background-position:0% 50%}
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
+}
+#portrait img {
+    width: 500px;
+    height: 500px;
+    /*position: relative;*/
+    /*right: 40px;*/
+    /*bottom: 0;*/
+    transform: translate(600px, -300px);
+}
+
+/*eyes*/
+
+#dogpupilleft,
+#dogpupilright {
+  position: relative;
+  background: #000000;
+  border-radius: 50%;
+}
+#dogeyeleft,
+#dogeyeright {
+  position: absolute;
+  background: #FFFFFF;
+  overflow: hidden;
+  border-radius: 50%;
+}
+#dogpupilleft {
+  width: 27px;
+  height: 27px;
+}
+#dogeyeleft
+{
+  width: 40px;
+  height: 40px;  
+  left: 900px; 
+  top: 280px;
+}
+
+#dogpupilright{
+  width: 27px;
+  height: 27px;
+}
+
+#dogeyeright {
+  width: 40px;
+  height: 40px;
+  left: 980px;
+  top: 280px;
 }
 
 /*scrollmagic*/
